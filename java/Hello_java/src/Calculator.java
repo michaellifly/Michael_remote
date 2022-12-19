@@ -1,5 +1,5 @@
 import java.util.Scanner;  //Import the Scanner class
-import java.util.InputMismatchException;
+// import java.util.InputMismatchException;
 
 public class Calculator{
   public static void main(String[] args){
@@ -25,7 +25,7 @@ public class Calculator{
               System.out.println("Answer: " +Result1);
 
             }
-          catch (InputMismatchException e){
+          catch (Exception e){
               System.out.println("Invalid input entered. Terminating...");
           }
               //System.out.println("Num1"+Num1);
@@ -53,7 +53,7 @@ public class Calculator{
 
                }
                System.out.printf("Answer: " + "%.2f%n",Result2);}
-               catch (InputMismatchException e){
+               catch (Exception e){
                  System.out.println("Invalid input entered. Terminating...");
                }
 
@@ -78,7 +78,7 @@ public class Calculator{
 
 
                 }
-                catch (InputMismatchException e){
+                catch (Exception e){
                   System.out.println("Invalid input entered. Terminating...");
                 }
 
