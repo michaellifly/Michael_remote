@@ -3,9 +3,9 @@ import java.util.Scanner;  //Import the Scanner class
 
 public class Calculator{
   public static void main(String[] args){
-    System.out.println("add,subtract,multiply,divide,alphabetize");
+    System.out.println("add subtract multiply divide alphabetize");
     Scanner input = new Scanner(System.in);
-    System.out.print("Enter an operation: ");
+    System.out.print("Enterad an operation: ");
     String operation=input.nextLine().trim().toLowerCase();
     //System.out.println(operation);
     switch (operation) {
@@ -25,7 +25,7 @@ public class Calculator{
               System.out.println("Answer: " +Result1);
 
             }
-          catch (InputMismatchException e){
+          catch (Exception e){
               System.out.println("Invalid input entered. Terminating...");
           }
               //System.out.println("Num1"+Num1);
@@ -53,7 +53,7 @@ public class Calculator{
 
                }
                System.out.printf("Answer: " + "%.2f%n",Result2);}
-               catch (InputMismatchException e){
+               catch (Exception e){
                  System.out.println("Invalid input entered. Terminating...");
                }
 
@@ -78,7 +78,7 @@ public class Calculator{
 
 
                 }
-                catch (InputMismatchException e){
+                catch (Exception e){
                   System.out.println("Invalid input entered. Terminating...");
                 }
 
