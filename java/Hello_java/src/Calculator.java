@@ -3,7 +3,7 @@ import java.util.InputMismatchException;
 
 public class Calculator{
   public static void main(String[] args){
-    System.out.println("List of operations: add,subtract,multiply,divide,alphabetize");
+    System.out.println("List of operations: add subtract multiply divide \nalphabetize");
     Scanner input = new Scanner(System.in);
     System.out.print("Enter an operation: \n");
     String operation=input.nextLine().trim().toLowerCase();
@@ -60,7 +60,6 @@ public class Calculator{
                break;
           case "alphabetize":
                 System.out.print("Enter Two Words: \n");
-
                 try{
                   String Word1=input.next();
                   String Word2=input.next();
