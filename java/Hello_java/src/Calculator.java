@@ -1,17 +1,17 @@
 import java.util.Scanner;  //Import the Scanner class
-//import java.util.InputMismatchException;
+import java.util.InputMismatchException;
 
 public class Calculator{
   public static void main(String[] args){
-    System.out.println("add subtract multiply divide alphabetize");
+    System.out.println("List of operations: add,subtract,multiply,divide,alphabetize");
     Scanner input = new Scanner(System.in);
-    System.out.print("Enterad an operation: ");
+    System.out.print("Enter an operation: \n");
     String operation=input.nextLine().trim().toLowerCase();
     //System.out.println(operation);
     switch (operation) {
         case "add":
         case "subtract":
-        System.out.print("Enter Two Integers: ");
+        System.out.print("Enter Two Integers: \n");
           try{
               int Num1 = input.nextInt();
               int Num2 = input.nextInt();
@@ -25,7 +25,7 @@ public class Calculator{
               System.out.println("Answer: " +Result1);
 
             }
-          catch (Exception e){
+          catch (InputMismatchException e){
               System.out.println("Invalid input entered. Terminating...");
           }
               //System.out.println("Num1"+Num1);
@@ -34,7 +34,7 @@ public class Calculator{
 
         case "multiply":
         case "divide":
-             System.out.print("Enter Two Doubles: ");
+             System.out.print("Enter Two Doubles: \n");
              try{
                double Num3 = input.nextDouble();
                double Num4 = input.nextDouble();
@@ -53,13 +53,13 @@ public class Calculator{
 
                }
                System.out.printf("Answer: " + "%.2f%n",Result2);}
-               catch (Exception e){
+               catch (InputMismatchException e){
                  System.out.println("Invalid input entered. Terminating...");
                }
 
                break;
           case "alphabetize":
-                System.out.print("Enter Two Words: ");
+                System.out.print("Enter Two Words: \n");
 
                 try{
                   String Word1=input.next();
@@ -78,7 +78,7 @@ public class Calculator{
 
 
                 }
-                catch (Exception e){
+                catch (InputMismatchException e){
                   System.out.println("Invalid input entered. Terminating...");
                 }
 
