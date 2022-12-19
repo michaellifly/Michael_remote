@@ -1,5 +1,5 @@
 import java.util.Scanner;  //Import the Scanner class
-import java.util.InputMismatchException;
+//import java.util.InputMismatchException;
 
 public class Calculator{
   public static void main(String[] args){
@@ -22,7 +22,7 @@ public class Calculator{
               else{
                 Result1 = Num1-Num2;
               }
-              System.out.println(Result1);
+              System.out.println("Answer: " +Result1);
 
             }
           catch (InputMismatchException e){
@@ -45,13 +45,14 @@ public class Calculator{
                else{
                  if (Num4 == 0.0){
                    System.out.println("Invalid input entered. Terminating...");
+                   break;
                  }
                  else{
                    Result2 = Num3/Num4;
                  }
 
                }
-               System.out.printf("'%.2f'%n",Result2);}
+               System.out.printf("Answer: " + "%.2f%n",Result2);}
                catch (InputMismatchException e){
                  System.out.println("Invalid input entered. Terminating...");
                }
@@ -61,17 +62,17 @@ public class Calculator{
                 System.out.print("Enter Two Words: ");
 
                 try{
-                  String Word1=input.next().toLowerCase();
-                  String Word2=input.next().toLowerCase();
-                  int result=Word1.compareTo(Word2);
+                  String Word1=input.next();
+                  String Word2=input.next();
+                  int result=(Word1.toLowerCase()).compareTo(Word2.toLowerCase());
                   if (result <0){
-                    System.out.println(Word1 + " comes before "+Word2+" alphabetically.");
+                    System.out.println("Answer: "+ Word1 + " comes before "+Word2+" alphabetically.");
                   }
                   else if (result==0){
-                    System.out.println("Chicken or Egg.");
+                    System.out.println("Answer: "+ "Chicken or Egg.");
                   }
                   else{
-                    System.out.println(Word2 +" comes before "+Word1+" alphabetically.");
+                    System.out.println("Answer: " + Word2 +" comes before "+Word1+" alphabetically.");
                   }
 
 
